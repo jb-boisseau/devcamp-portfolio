@@ -6,7 +6,7 @@
   <% @portfolio_items.each do |portfolio_item| %>
     <div class="col-md-3 card shadow m-4 p-2">
       <div class="jumbotron shadow" id="id-jumbotron">
-        <h1><%= portfolio_item.title %></h1>
+        <h1><%= link_to portfolio_item.title, portfolio_path(portfolio_item) %></h1>
       </div>
       <h2><%= portfolio_item.subtitle %></h2>
       <p><%= portfolio_item.body %></p>
