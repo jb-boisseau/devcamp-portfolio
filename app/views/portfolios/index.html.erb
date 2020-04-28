@@ -1,12 +1,18 @@
 <h1>Portfolio Items</h1>
 <%= link_to "Create new item", new_portfolio_path %>
 
-<% @portfolio_items.each do |portfolio_item| %>
-
-  <h1 class="alert alert-primary" role="alert"><%= portfolio_item.title %></h1>
-  <h2><%= portfolio_item.subtitle %></h2>
-  <p><%= portfolio_item.body %></p>
-  <p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
-  <p><%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %></p>
-  <hr>
-<% end %>
+<div class="col-md-12">
+  <div class="row">
+  <% @portfolio_items.each do |portfolio_item| %>
+    <div class="col-md-3 card shadow m-4 p-2">
+      <div class="jumbotron shadow" id="id-jumbotron">
+        <h1><%= portfolio_item.title %></h1>
+      </div>
+      <h2><%= portfolio_item.subtitle %></h2>
+      <p><%= portfolio_item.body %></p>
+      <p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
+      <p><%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %></p>
+    </div>
+  <% end %>
+  </div>
+</div>
