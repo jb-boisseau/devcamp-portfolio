@@ -7,6 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("./bootstrap")
+
 import "bootstrap"
 
 
@@ -16,3 +18,7 @@ import "bootstrap"
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
