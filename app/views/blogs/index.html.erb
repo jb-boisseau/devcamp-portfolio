@@ -1,19 +1,32 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
-  <h1>Blogs</h1>
+  <% if notice.present? %>
+  <div id="notice", class="alert alert-primary shadow p-2 m-2"><%= notice %></div>
+  <% end %>
+  <h1 id="index-title">Blogs
+    <span class="badge badge-success"><em><%= @blogs.count %> articles</em></span>
+  </h1>
+  <div class="float-right">
+    Contact :<kbd class="lead btn btn-warning badge badge-pill badge-warning">© JB Boisseau</kbd>
+  </div>
   <%= link_to 'New Blog', new_blog_path, class:"btn btn-primary" %>
-  <% @blogs.each do |blog| %>
-    <div class="card shadow m-4 p-4">
-      <h1><%= blog.title %></h1>
-      <lead><%= blog.body %></lead>
-      <div class="list-group col-md-2 float-right m-4">
-        <div class="btn-group">
-          <div><%= link_to 'Show', blog, class:"btn btn-primary mr-2" %></div>
-          <div><%= link_to 'Edit', edit_blog_path(blog), class:"btn btn-success mr-2" %></div>
-          <div><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger mr-2"%></div>
-          <div><%= link_to blog.status, toggle_status_blog_path(blog), class: "btn btn-info mr-2" %></div>
+  <div class="col-md-12">
+    <div class="row">
+    <% @blogs.each do |blog| %>
+    <div class="col-md-4">
+      <div class="card shadow rounded m-2 p-4">
+        <h1 class="index-title"><%= blog.title %></h1>
+        <kbd class="badge badge-pill badge-light float-right"><%= link_to blog.status, toggle_status_blog_path(blog) %></kbd>
+        <lead><%= blog.body %></lead>
+        <div class="list-group  m-4">
+          <div class="btn-group">
+            <div><%= link_to 'Show', blog, class:"btn btn-primary mr-2 shadow" %></div>
+            <div><%= link_to 'Edit', edit_blog_path(blog), class:"btn btn-success mr-2 shadow float-right" %></div>
+            <div><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger mr-2 shadow"%></div>
+          </div>
         </div>
       </div>
     </div>
-  <% end %>
+    <% end %>
+  </div>
+  </div>
 </div>

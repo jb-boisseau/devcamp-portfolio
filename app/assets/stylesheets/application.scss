@@ -57,5 +57,19 @@
 @import 'bootstrap/scss/utilities';
 @import 'bootstrap/scss/print';
 
-body {
+.btn {
+  color: whitesmoke !important;
+}
+
+.btn.btn-light {
+  color: black !important;
+}
+
+.show-title {
+  background: #4267b2;
+  color: whitesmoke;
+}
+
+#index-title {
+  background: #4267b2 !important;
 }
