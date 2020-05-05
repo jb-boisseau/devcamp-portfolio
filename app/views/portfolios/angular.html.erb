@@ -1,0 +1,18 @@
+<h1>Angular Portfolio Items</h1>
+<%= link_to "Create new item", new_portfolio_path, class:"btn btn-primary" %>
+<div class="float-right">
+  Contact :<kbd class="lead btn btn-warning">© JB Boisseau</kbd>
+</div>
+<div class="col-md-12">
+  <div class="row">
+  <% @angular_portfolio_items.each do |portfolio_item| %>
+    <div class="col-md-3 card shadow m-4 p-2">
+      <div class="jumbotron shadow" id="id-jumbotron">
+        <h1><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h1>
+      </div>
+      <h2><%= portfolio_item.subtitle %></h2>
+      <p><%= portfolio_item.body %></p>
+    </div>
+  <% end %>
+  </div>
+</div>
