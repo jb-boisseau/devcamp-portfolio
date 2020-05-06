@@ -42,4 +42,3 @@ end
      name:"Technology #{technology}"
    )
 end
-puts "3 tech added"

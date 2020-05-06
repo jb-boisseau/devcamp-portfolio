@@ -13,6 +13,7 @@
  *= require bootstrap
  *= require_tree .
  *= require_self
+ *= require rails_bootstrap_forms
  */
 
  // Required
@@ -57,6 +58,7 @@
 @import 'bootstrap/scss/utilities';
 @import 'bootstrap/scss/print';
 
+
 .btn {
   color: whitesmoke !important;
 }
@@ -72,4 +74,8 @@
 
 #index-title {
   background: #4267b2 !important;
+}
+
+#code {
+  background-color: black !important;
 }
