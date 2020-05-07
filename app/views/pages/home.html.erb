@@ -1,10 +1,19 @@
 <div class="container">
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<h1>Blog posts</h1>
- <%= @posts.inspect %>
- <h1>Skills</h1>
- <%= @skills.inspect %>
- <h1>Portfolios</h1>
- <%= @portfolios.inspect %>
+  <h1>Hi,
+    <%= current_user.first_name if current_user.name.present? %></h1>
+  <p>Find me in app/views/pages/home.html.erb</p>
+
+  <div class="card shadow p-4 m-4">
+    <h1>Blog posts</h1>
+    <%= @posts.inspect %>
+  </div>
+  <div class="card shadow p-4 m-4">
+    <h1>Skills</h1>
+    <%= @skills.inspect %>
+  </div>
+
+  <div class="card shadow p-4 m-4">
+    <h1>Portfolios</h1>
+    <%= @portfolios.inspect %>
+  </div>
 </div>
