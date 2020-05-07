@@ -16,10 +16,10 @@
 
     <div class="btn btn-warning">
       <% if current_user %>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       <% else %>
-      <%= link_to "Register", new_user_registration_path %>
-        </div>
+        <%= link_to "Register", new_user_registration_path %>
+      </div>
       <div class="btn btn-light">
         <%= link_to "Login", new_user_session_path %>
       </div>
@@ -27,5 +27,11 @@
     </div>
 
     <%= yield %>
+    <hr>
+    <% if session[:source] %>
+      <div>
+        <p>thanks for visiting me from <%= session[:source] %></p>
+      </div>
+    <% end %>
   </body>
 </html>
