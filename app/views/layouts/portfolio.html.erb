@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @page_title %> | JB Boisseau</title>
+    <title><%= @page_title %>
+      | JB Boisseau</title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>">
     <%= csp_meta_tag %>
@@ -11,10 +12,8 @@
 
   <body>
 
-
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <div class="btn btn-warning">
       <% if current_user.is_a?(User) %>
         <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -22,19 +21,16 @@
         <%= link_to "Register", new_user_registration_path %>
       <% end %>
     </div>
-    <div>
-      <div><%= link_to "Accueil", root_path %></div>
-      <div><%= link_to "Blog", blogs_path %></div>
-      <div><%= link_to "Portfolio", portfolios_path %></div>
-      <div><%= link_to "A propos de moi", about_me_path %></div>
-      <div><%= link_to "Connexion", new_user_session_path %></div>
-    </div>
+
+    <%= render "shared/nav", location: "top" %>
+
     <%= yield %>
     <hr>
 
     <% if session[:source] %>
       <div>
-        <p>thanks for visiting me from <%= session[:source] %></p>
+        <p>thanks for visiting me from
+          <%= session[:source] %></p>
       </div>
     <% end %>
   </body>
