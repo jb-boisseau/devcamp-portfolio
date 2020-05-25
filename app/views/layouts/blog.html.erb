@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>">
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'blog', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -22,13 +22,12 @@
         <%= link_to "Register", new_user_registration_path %>
       <% end %>
     </div>
-    <div class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="navbar-nav"><%= link_to "JB Boisseau", root_path  %></div>
-      <div class="nav-link"><%= link_to "Accueil", root_path %></div>
-      <div class="nav-link"><%= link_to "Blog", blogs_path %></div>
-      <div class="nav-link"><%= link_to "Portfolio", portfolios_path %></div>
-      <div class="nav-link"><%= link_to "A propos de moi", about_me_path %></div>
-      <div class="nav-link"><%= link_to "Accueil", new_user_session_path %></div>
+    <div>
+      <div><%= link_to "Accueil", root_path %></div>
+      <div><%= link_to "Blog", blogs_path %></div>
+      <div><%= link_to "Portfolio", portfolios_path %></div>
+      <div><%= link_to "A propos de moi", about_me_path %></div>
+      <div><%= link_to "Connexion", new_user_session_path %></div>
     </div>
     <%= yield %>
     <hr>
