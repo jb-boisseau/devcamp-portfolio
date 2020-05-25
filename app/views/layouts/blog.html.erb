@@ -22,13 +22,9 @@
         <%= link_to "Register", new_user_registration_path %>
       <% end %>
     </div>
-    <div>
-      <div><%= link_to "Accueil", root_path %></div>
-      <div><%= link_to "Blog", blogs_path %></div>
-      <div><%= link_to "Portfolio", portfolios_path %></div>
-      <div><%= link_to "A propos de moi", about_me_path %></div>
-      <div><%= link_to "Connexion", new_user_session_path %></div>
-    </div>
+
+    <%= render "shared/nav" %>
+    
     <%= yield %>
     <hr>
 
