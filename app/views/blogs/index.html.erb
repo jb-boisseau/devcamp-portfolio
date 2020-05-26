@@ -5,28 +5,19 @@
   <h1 id="index-title">Blogs
     <span class="badge badge-success"><em><%= @blogs.count %> articles</em></span>
   </h1>
-  <div class="float-right">
-    Contact :<kbd class="lead btn btn-warning badge badge-pill badge-warning">© JB Boisseau</kbd>
-  </div>
-  <%= link_to 'New Blog', new_blog_path, class:"btn btn-primary" %>
-  <div class="col-md-12">
-    <div class="row">
-    <% @blogs.each do |blog| %>
-    <div class="col-md-4">
-      <div class="card shadow rounded m-2 p-4">
-        <h1 class="index-title"><%= blog.title.upcase %></h1>
-        <kbd class="badge badge-pill badge-light float-right"><%= link_to blog.status, toggle_status_blog_path(blog) %></kbd>
-        <lead><%= blog.body %></lead>
-        <div class="list-group  m-4">
-          <div class="btn-group">
-            <div><%= link_to 'Show', blog, class:"btn btn-primary mr-2 shadow" %></div>
-            <div><%= link_to 'Edit', edit_blog_path(blog), class:"btn btn-success mr-2 shadow float-right" %></div>
-            <div><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger mr-2 shadow"%></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  </div>
-  </div>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Titre du post</th>
+      <th>Post</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @blogs %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New blog", new_blog_path %>
