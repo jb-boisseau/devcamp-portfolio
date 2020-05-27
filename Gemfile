@@ -53,3 +53,5 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 # Ostruct
 gem 'ostruct'
+# Bootstrap
+gem 'bootstrap', '~> 4.5'

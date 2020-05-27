@@ -1,10 +1,10 @@
-<div class="m-4">
+<div class="container">
   <h1>Portfolio Items</h1>
   <%= link_to "Create new item", new_portfolio_path, class:"btn btn-primary" %>
   <div class="float-right">
     <code id="code" class="m-4 p-2" >Contact :© jb boisseau</code>
   </div>
-  <div class="card">
+  <div>
     <%= render partial: 'portfolio_item', collection: @portfolio_items %>
   </div>
 </div>
