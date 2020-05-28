@@ -55,3 +55,5 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'ostruct'
 # Bootstrap
 gem 'bootstrap', '~> 4.5'
+# My own module
+gem 'jbboisseau_view_tool', git: "https://github.com/jb-boisseau/jbboisseau_view_tool.git"

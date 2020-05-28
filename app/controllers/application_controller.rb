@@ -4,4 +4,10 @@ class ApplicationController < ActionController::Base
   include SetSource
   include CurrentUserConcern
   include DefaultPageContent
+
+  before_action :set_copyright
+
+  def set_copyright
+    @copyright = JbboisseauViewTool::Renderer.copyright 'JB Boisseau', 'Tous droits réservés'
+  end
 end

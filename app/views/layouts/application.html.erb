@@ -24,9 +24,10 @@
     <%= login_helper %>
 
     <%= yield %>
-    <hr>
 
     <%= source_helper("application") %>
-
+    <div class="float-right">
+      <%= @copyright %>
+    </div>
   </body>
 </html>
