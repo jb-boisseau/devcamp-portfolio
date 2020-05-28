@@ -31,6 +31,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Pry byebug
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -51,3 +53,13 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 # Ostruct
 gem 'ostruct'
+# Bootstrap
+gem 'bootstrap', '~> 4.5'
+# My own module
+gem 'jbboisseau_view_tool', git: "https://github.com/jb-boisseau/jbboisseau_view_tool.git"
+# Petergate
+gem 'petergate', '~> 2.0', '>= 2.0.1'
+# Github requirements
+gem "activesupport", ">= 6.0.3.1"
+gem "actionpack", ">= 6.0.3.1"
+gem "activestorage", ">= 6.0.3.1"

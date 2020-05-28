@@ -1,24 +1,13 @@
-<div class="container">
+<div class="col-md-12">
   <% if notice.present? %>
   <div id="notice", class="alert alert-primary shadow p-2 m-2"><%= notice %></div>
   <% end %>
   <h1 id="index-title">Blogs
     <span class="badge badge-success"><em><%= @blogs.count %> articles</em></span>
   </h1>
-<table>
-  <thead>
-    <tr>
-      <th>Titre du post</th>
-      <th>Date</th>
-      <th>Post</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="container">
     <%= render @blogs %>
-  </tbody>
-</table>
-
+</div>
 <br>
 
-<%= link_to "New blog", new_blog_path %>
+<%= link_to "New blog", new_blog_path if logged_in?(:site_admin)  %>

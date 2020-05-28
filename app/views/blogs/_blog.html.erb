@@ -1,12 +1,11 @@
-<div class="card">
-  <tr>
-    <td><%= blog.title.upcase %></td>
-    <td>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</td>
-    <td>Updated <%= distance_of_time_in_words(blog.updated_at, Time.now) %> ago</td>
-    <td><%= blog.body %></td>
-    <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
-    <td><%= link_to "Show", blog %></td>
-    <td><%= link_to "Edit", edit_blog_path(blog) %></td>
-    <td><%= link_to "Delete post", blog, method: :delete, data: { confirm: "Sure?" } %></td>
-  </tr>
+<div class="card shadow p-4 m-4">
+    <div><%= blog.title.upcase %></div>
+    <div>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</div>
+    <div>Updated <%= distance_of_time_in_words(blog.updated_at, Time.now) %> ago</div>
+    <div><%= blog.body %></div>
+    <div><%= link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:site_admin) %></div>
+    <div><%= link_to "Show", blog %></div>
+    <div><%= link_to "Edit", edit_blog_path(blog) if logged_in?(:site_admin) %></div>
+    <div><%= link_to "Delete post", blog, method: :delete, data: { confirm: "Sure?" } if logged_in?(:site_admin) %></div>
+
 </div>
