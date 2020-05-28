@@ -1,8 +1,5 @@
 <h1>Angular Portfolio Items</h1>
-<%= link_to "Create new item", new_portfolio_path, class:"btn btn-primary" %>
-<div class="float-right">
-  Contact :<kbd class="lead btn btn-warning">© JB Boisseau</kbd>
-</div>
+<%= link_to "Create new item", new_portfolio_path, class:"btn btn-primary" if logged_in?(:site_admin) %>
 <div class="col-md-12">
   <div class="row">
   <% @angular_portfolio_items.each do |portfolio_item| %>

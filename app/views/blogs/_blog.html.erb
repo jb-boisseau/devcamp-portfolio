@@ -3,9 +3,9 @@
     <div>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</div>
     <div>Updated <%= distance_of_time_in_words(blog.updated_at, Time.now) %> ago</div>
     <div><%= blog.body %></div>
-    <div><%= link_to blog.status, toggle_status_blog_path(blog) %></div>
+    <div><%= link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:site_admin) %></div>
     <div><%= link_to "Show", blog %></div>
-    <div><%= link_to "Edit", edit_blog_path(blog) %></div>
-    <div><%= link_to "Delete post", blog, method: :delete, data: { confirm: "Sure?" } %></div>
+    <div><%= link_to "Edit", edit_blog_path(blog) if logged_in?(:site_admin) %></div>
+    <div><%= link_to "Delete post", blog, method: :delete, data: { confirm: "Sure?" } if logged_in?(:site_admin) %></div>
 
 </div>

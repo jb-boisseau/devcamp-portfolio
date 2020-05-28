@@ -1,10 +1,5 @@
 <div class="container">
   <h1>Portfolio Items</h1>
-  <%= link_to "Create new item", new_portfolio_path, class:"btn btn-primary" %>
-  <div class="float-right">
-    <code id="code" class="m-4 p-2" >Contact :© jb boisseau</code>
-  </div>
-  <div>
+  <%= link_to "Create new item", new_portfolio_path, class:"btn btn-primary" if logged_in?(:site_admin) %>
     <%= render partial: 'portfolio_item', collection: @portfolio_items %>
-  </div>
 </div>
