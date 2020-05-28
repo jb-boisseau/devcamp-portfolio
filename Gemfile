@@ -57,3 +57,5 @@ gem 'ostruct'
 gem 'bootstrap', '~> 4.5'
 # My own module
 gem 'jbboisseau_view_tool', git: "https://github.com/jb-boisseau/jbboisseau_view_tool.git"
+# Petergate
+gem 'petergate', '~> 2.0', '>= 2.0.1'
