@@ -1,4 +1,4 @@
-<div class="card shadow m-4 p-4">
+
 
   <h1><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h1>
   <h2><%= portfolio_item.subtitle %></h2>
@@ -9,4 +9,3 @@
 
   <p><%= link_to "Edit", edit_portfolio_path(portfolio_item.id) if logged_in?(:site_admin) %></p>
   <p><%= link_to 'Delete portfolio item', portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></p>
-</div>
