@@ -59,3 +59,7 @@ gem 'bootstrap', '~> 4.5'
 gem 'jbboisseau_view_tool', git: "https://github.com/jb-boisseau/jbboisseau_view_tool.git"
 # Petergate
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+# Github requirements
+gem "activesupport", ">= 6.0.3.1"
+gem "actionpack", ">= 6.0.3.1"
+gem "activestorage", ">= 6.0.3.1"
