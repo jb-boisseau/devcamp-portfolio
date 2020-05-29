@@ -1,0 +1,4 @@
+"emmet.includeLanguages": {"erb": "html"}
+"editor.fontSize": 12,
+"editor.fontFamily": "roboto",
+"ruby.codeCompletion": true,
