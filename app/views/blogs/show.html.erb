@@ -5,7 +5,7 @@
 <div class="card-body">
   <%= @blog.body %>
   <hr>
-  <%= link_to 'Edit', edit_blog_path(@blog), class:"btn btn-primary mr-2 shadow" if if logged_in?(:site_admin) %>
+  <%= link_to 'Edit', edit_blog_path(@blog), class:"btn btn-primary mr-2 shadow" if logged_in?(:site_admin) %>
   <%= link_to 'Back', blogs_path, class:"btn btn-secondary mr-2 shadow" %>
 </div>
 <div class="float-right">
