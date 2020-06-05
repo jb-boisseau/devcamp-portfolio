@@ -1,13 +1,22 @@
-<h1><%= @portfolio_item.title %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <p><%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %></p>
+    </div>
+    <div class="col-md-5">
 
-<em><%= @portfolio_item.subtitle %></em>
-<p><%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %></p>
-<p><%= @portfolio_item.body %></p>
-<h2>Technologies used :
-</h2>
-<% @portfolio_item.technologies.each do |t| %>
-  <p><%= t.name %></p>
-<% end %>
-<p><%= link_to "Edit", edit_portfolio_path if logged_in?(:site_admin) %></p>
 
-<hr>
+      <h1><%= @portfolio_item.title %><%= link_to "  Edit", edit_portfolio_path, class:"small" if logged_in?(:site_admin) %></h1>
+      <hr>
+      <em><%= @portfolio_item.subtitle %></em>
+
+      <p><%= @portfolio_item.body %></p>
+      <hr>
+      <h3>Technologies used :</h3>
+        <% @portfolio_item.technologies.each do |t| %>
+        <p><%= t.name %></p>
+
+      <% end %>
+    </div>
+  </div>
+</div>
