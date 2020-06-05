@@ -17,62 +17,18 @@
   </head>
 
   <body>
-    <!-- Start Nav -->
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-expand" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- End Nav -->
+    <%= render "shared/portfolio_nav" %>
 
-    <!-- Start Masthead -->
-    <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Album example</h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-        <p>
-          <a href="#" class="btn btn-primary">Main call to action</a>
-          <a href="#" class="btn btn-secondary">Secondary action</a>
-        </p>
-      </div>
-    </section>
-    <!-- End Masthead -->
+    <%= render "shared/portfolio_masthead" %>
 
-
-    <%= login_helper %>
-
-    <%= render "shared/nav", location: "top" %>
 
     <%= yield %>
 
 
     <hr>
     <!-- Start of footer -->
-
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
-    </footer>
+    <%= render "shared/portfolio_footer" %>
     <!-- Start of footer -->
     <%= source_helper("application") %>
   </body>
