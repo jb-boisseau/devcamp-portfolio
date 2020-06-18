@@ -2,11 +2,7 @@
   <%= link_to "JB Boisseau ", root_path, class:"navbar-brand text-white" %>
   <div class="collapse navbar-collapse" id="navbar-collapse-1">
     <div class="nav navbar-nav navbar-right" id="navbarSupportedContent">
-      <%= link_to "Home ", root_path, class:"nav-link text-white" %>
-      <%= link_to "Blog", blogs_path, class:"nav-link text-white" %>
-      <%= link_to "Contact", contact_me_path, class:"nav-link text-white" %>
-      <%= link_to "Portfolio", portfolios_path, class:"nav-link text-white" %>
-      <%= link_to "About me", about_me_path, class:"nav-link text-white" %>
+      <%= nav_helper 'nav-link text-white', "span" %>
       <%= login_helper %>
     </div>
   </div>
