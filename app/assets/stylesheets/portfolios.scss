@@ -6,6 +6,7 @@
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
+@import 'jquery-ui';
 
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
@@ -68,5 +69,5 @@ footer p {
 // Custom style
 
 .portfolio_form {
-  padding: 20px; 
+  padding: 20px;
 }

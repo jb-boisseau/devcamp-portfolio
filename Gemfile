@@ -64,3 +64,4 @@ gem "font-awesome-rails", '~> 4.7', '>= 4.7.0.1'
 gem "activesupport", ">= 6.0.3.1"
 gem "actionpack", ">= 6.0.3.1"
 gem "activestorage", ">= 6.0.3.1"
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
