@@ -1,13 +1,9 @@
-<div class="col-md-12">
-  <% if notice.present? %>
-  <div id="notice", class="alert alert-primary shadow p-2 m-2"><%= notice %></div>
-  <% end %>
-  <h1 id="index-title">Blogs
-    <span class="badge badge-success"><em><%= @blogs.count %> articles</em></span>
-  </h1>
-<div class="container">
-    <%= render @blogs %>
-</div>
-<br>
+<div class="col-sm-8 blog-main">
 
-<%= link_to "New blog", new_blog_path if logged_in?(:site_admin)  %>
+  <%= paginate @blogs %>
+
+  <%= render @blogs %>
+
+  <%= paginate @blogs %>
+
+</div>

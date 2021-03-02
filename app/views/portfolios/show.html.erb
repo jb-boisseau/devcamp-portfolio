@@ -1,16 +1,22 @@
-<div class="m-4 p-4">
-  <div class="col-md-6 card shadow m-4 p-2 centered">
-    <div class="jumbotron shadow" id="id-jumbotron">
-      <h1><%= @portfolio_item.title %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <p><%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %></p>
     </div>
-    <em><%= @portfolio_item.subtitle %></em>
-    <p><%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %></p>
-    <p><%= @portfolio_item.body %></p>
-    <h2>Technologies used : </h2>
-      <% @portfolio_item.technologies.each do |t| %>
-      <p><%= t.name %></p>
+    <div class="col-md-5">
+
+
+      <h1><%= @portfolio_item.title %><%= link_to "  Edit", edit_portfolio_path, class:"small" if logged_in?(:site_admin) %></h1>
+      <hr>
+      <em><%= @portfolio_item.subtitle %></em>
+
+      <p><%= @portfolio_item.body %></p>
+      <hr>
+      <h3>Technologies used :</h3>
+        <% @portfolio_item.technologies.each do |t| %>
+        <p><%= t.name %></p>
+
       <% end %>
-    <p><%= link_to "Edit", edit_portfolio_path if logged_in?(:site_admin) %></p>
+    </div>
   </div>
-  <hr>
 </div>

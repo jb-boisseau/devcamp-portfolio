@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -54,11 +54,12 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 # Ostruct
 gem 'ostruct'
 # Bootstrap
-gem 'bootstrap', '~> 4.5'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 # My own module
 gem 'jbboisseau_view_tool', git: "https://github.com/jb-boisseau/jbboisseau_view_tool.git"
-# Petergate
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem "font-awesome-rails", '~> 4.7', '>= 4.7.0.1'
 # Github requirements
 gem "activesupport", ">= 6.0.3.1"
 gem "actionpack", ">= 6.0.3.1"

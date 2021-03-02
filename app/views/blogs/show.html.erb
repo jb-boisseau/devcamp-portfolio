@@ -1,21 +1,5 @@
-<div id="notice"><%= notice %></div>
-<div class="row justify-content-md-center">
-  <div class="col-md-6 float-center">
-    <div class="card shadow m-4 p-4" >
-      <div class="card-header show-title shadow">
-        <h1><%= @blog.title %></h1>
-      </div>
-      <div class="card-body">
-        <%= @blog.body %>
-        <hr>
-        <%= link_to 'Edit', edit_blog_path(@blog), class:"btn btn-primary mr-2 shadow" if if logged_in?(:site_admin) %> 
-        <%= link_to 'Back', blogs_path, class:"btn btn-secondary mr-2 shadow" %>
-      </div>
-      <div class="float-right">
-        Contact :
-        <kbd class="lead btn btn-warning">© JB Boisseau</kbd>
-      </div>
-    </div>
-  </div>
-
+<div class="col-sm-8 blog-main">
+  <h1><%= @blog.title %></h1>
+  <p><%= @blog.body %></p>
+  <%= link_to 'Edit', edit_blog_path(@blog), class:"btn btn-primary mr-2 shadow" if logged_in?(:site_admin) %>
 </div>
